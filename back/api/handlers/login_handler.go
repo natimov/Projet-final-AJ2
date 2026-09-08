@@ -12,7 +12,7 @@ import (
 	"meridian/back/api/models"
 )
 
-var jwtSecret = []byte("change_moi_plus_tard")
+var jwtSecret = []byte("esgi27_meridian_rue_erard") // à modifier plus tard, on mettra ça dans uen variabvle d'environnement
 
 func Login(c *gin.Context) {
 	var input struct {

@@ -9,4 +9,5 @@ import (
 func setupRoutes(router *gin.Engine) {
 	router.GET("/test", handlers.Test)
 	router.POST("/login", handlers.Login)
+	router.POST("/users", handlers.CreateUser)
 }
