@@ -14,4 +14,9 @@ func setupRoutes(router *gin.Engine) {
 	router.GET("/users/:id", handlers.GetUser)
 	router.PUT("/users/:id", handlers.UpdateUser)
 	router.DELETE("/users/:id", handlers.DeleteUser)
+	router.POST("/prestations", handlers.CreatePrestation)
+	router.GET("/prestations", handlers.GetPrestations)
+	router.GET("/prestations/:id", handlers.GetPrestation)
+	router.PUT("/prestations/:id", handlers.UpdatePrestation)
+	router.DELETE("/prestations/:id", handlers.DeletePrestation)
 	}
