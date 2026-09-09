@@ -24,6 +24,10 @@ func setupRoutes(router *gin.Engine) {
 	router.GET("/categories-prestation/:id", handlers.GetCategoriePrestation)
 	router.PUT("/categories-prestation/:id", handlers.UpdateCategoriePrestation)
 	router.DELETE("/categories-prestation/:id", handlers.DeleteCategoriePrestation)
-
+	router.POST("/evenements", handlers.CreateEvenement)
+	router.GET("/evenements", handlers.GetEvenements)
+	router.GET("/evenements/:id", handlers.GetEvenement)
+	router.PUT("/evenements/:id", handlers.UpdateEvenement)
+	router.DELETE("/evenements/:id", handlers.DeleteEvenement)
 	
 	}
