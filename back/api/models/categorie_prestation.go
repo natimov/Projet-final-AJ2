@@ -3,5 +3,5 @@ import "gorm.io/gorm"
 
 type CategoriePrestation struct {
 	gorm.Model
-	Libelle string `json:"libelle"`
+	Libelle string `json:"libelle" gorm:"unique"`
 }

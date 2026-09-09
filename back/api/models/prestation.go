@@ -12,4 +12,6 @@ type Prestation struct {
 	Lieu             string `json:"lieu"`
 	ImageIllustration string `json:"image_illustration"`
 	Statut           string  `json:"statut" gorm:"default:brouillon"`
+	CategorieID        uint    `json:"categorie_id"`
+	Categorie          CategoriePrestation `json:"categorie"`
 }

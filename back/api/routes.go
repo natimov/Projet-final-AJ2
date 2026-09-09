@@ -24,4 +24,6 @@ func setupRoutes(router *gin.Engine) {
 	router.GET("/categories-prestation/:id", handlers.GetCategoriePrestation)
 	router.PUT("/categories-prestation/:id", handlers.UpdateCategoriePrestation)
 	router.DELETE("/categories-prestation/:id", handlers.DeleteCategoriePrestation)
+
+	
 	}
