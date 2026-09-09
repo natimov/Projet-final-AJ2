@@ -44,3 +44,71 @@ func CreateUser(c *gin.Context) {
 
 	c.JSON(http.StatusCreated, user)
 }
+func GetUsers(c *gin.Context) {
+	var users []models.User
+	query := database.DB
+
+	role := c.Query("role")
+	if role != "" {
+		query = query.Where("role = ?", role)
+	}
+
+	query.Find(&users)
+	c.JSON(http.StatusOK, users)
+}
+
+func GetUser(c *gin.Context) {
+	id := c.Param("id")
+
+	var user models.User
+	result := database.DB.First(&user, id)
+	if result.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Utilisateur introuvable"})
+		return
+	}
+
+	c.JSON(http.StatusOK, user)
+}
+
+func UpdateUser(c *gin.Context) {
+	id := c.Param("id")
+
+	var user models.User
+	result := database.DB.First(&user, id)
+	if result.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Utilisateur introuvable"})
+		return
+	}
+
+	var input struct {
+		Name  string `json:"name"`
+		Email string `json:"email"`
+		Role  string `json:"role"`
+	}
+
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Requête invalide"})
+		return
+	}
+
+	user.Name = input.Name
+	user.Email = input.Email
+	user.Role = input.Role
+
+	database.DB.Save(&user)
+	c.JSON(http.StatusOK, user)
+}
+
+func DeleteUser(c *gin.Context) {
+	id := c.Param("id")
+
+	var user models.User
+	result := database.DB.First(&user, id)
+	if result.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Utilisateur introuvable"})
+		return
+	}
+
+	database.DB.Delete(&user)
+	c.JSON(http.StatusOK, gin.H{"message": "Utilisateur supprimé"})
+}
