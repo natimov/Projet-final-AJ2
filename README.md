@@ -1,17 +1,18 @@
 # Projet-final-AJ2 — Meridian Tech
 
+Back en Go natif (Gin, GORM, golang-jwt, bcrypt). Front en Vue.js.
+
 ## Prérequis à installer
 
-- Node.js v24 (LTS) 
-- PHP 8.4 + Composer, via Laravel Herd 
+- Node.js v24 (LTS) — nodejs.org
+- Go 1.27 — go.dev/dl
+- Postman (pour tester l'API) — postman.com/downloads
 
-
-
+Vérifier les versions après installation :
 
 ```
-node -v      
-php -v       
-composer -V
+node -v      # doit afficher v24.x
+go version   # doit afficher go1.27.x
 ```
 
 ## Cloner le projet
@@ -22,15 +23,20 @@ cd Projet-final-AJ2
 git checkout dev
 ```
 
-## Installer le back (api)
+## Installer le back (back/api)
 
 ```
-cd api
-composer install
-copy .env.example .env
-php artisan key:generate
-php artisan migrate
+cd back/api
+copy .env.exemple .env
 ```
+
+Ouvrir le fichier `.env` créé et remplacer la valeur de `JWT_SECRET` par une vraie clé secrète (n'importe quelle chaîne de caractères longue suffit en local).
+
+```
+go run .
+```
+
+Les dépendances (Gin, GORM, golang-jwt, bcrypt...) se téléchargent automatiquement au premier lancement.
 
 ## Installer le front (front)
 
@@ -41,11 +47,11 @@ npm install --legacy-peer-deps
 
 Le `--legacy-peer-deps` est nécessaire à cause d'un conflit de versions entre `oxlint` et `eslint-plugin-oxlint`.
 
-## Lancer le projet (2 pwshell séparés)
+## Lancer le projet (2 terminaux séparés)
 
 ```
-cd api
-php artisan serve
+cd back/api
+go run .
 ```
 
 ```
@@ -53,6 +59,14 @@ cd front
 npm run dev
 ```
 
-- API : http://127.0.0.1:8000
+- API : http://localhost:8080
 - Front : http://localhost:5173
 
+## Conventions
+
+- Jamais de push direct sur `main`
+- Respecter la convention de nomage des commit (voir le PDF )
+- Créer une branche par feature (ou groupe de feature )
+- Merge sur dev uniquement si la feature est approuvée
+
+  
