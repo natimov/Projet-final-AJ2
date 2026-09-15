@@ -8,11 +8,10 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/bcrypt"
 
+	"meridian/back/api/config"
 	"meridian/back/api/database"
 	"meridian/back/api/models"
 )
-
-var jwtSecret = []byte("esgi27_meridian_rue_erard") // à modifier plus tard, on mettra ça dans uen variabvle d'environnement
 
 func Login(c *gin.Context) {
 	var input struct {
@@ -44,7 +43,7 @@ func Login(c *gin.Context) {
 		"exp":     time.Now().Add(time.Hour * 24).Unix(),
 	})
 
-	tokenString, err := token.SignedString(jwtSecret)
+	tokenString, err := token.SignedString(config.JWTSecret)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur lors de la génération du token"})
 		return
