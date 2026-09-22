@@ -29,5 +29,6 @@ func setupRoutes(router *gin.Engine) {
 	router.GET("/evenements/:id", handlers.GetEvenement)
 	router.PUT("/evenements/:id", handlers.UpdateEvenement)
 	router.DELETE("/evenements/:id", handlers.DeleteEvenement)
-	
-	}
+	router.POST("/register", handlers.Register)
+
+}
