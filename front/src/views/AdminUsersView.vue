@@ -164,6 +164,11 @@ th {
   font-size: 0.85rem;
 }
 
+th:nth-child(3),
+td:nth-child(3) {
+  width: 280px;
+}
+
 th:last-child,
 td:last-child {
   width: 190px;
