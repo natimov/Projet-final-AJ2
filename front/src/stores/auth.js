@@ -6,7 +6,7 @@ export const useAuthStore = defineStore('auth', () => {
   const user = ref(JSON.parse(localStorage.getItem('user') || 'null'))
 
   async function login(email, password) {
-    const response = await fetch('http://localhost:8080/login', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -31,7 +31,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   }
   async function register(payload) {
-    const response = await fetch('http://localhost:8080/register', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
