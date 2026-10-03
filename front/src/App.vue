@@ -29,10 +29,9 @@ onClickOutside(profileRef, () => {
 <template>
   <header>
     <div class="header-top">
-      <img alt="Logo Meridian" class="logo" src="@/assets/meridian-logo.png" />
       <div class="brand">
-        <h1>Meridian</h1>
-        <p class="tagline">Bienvenue sur l'application Meridian</p>
+        <h1>Upcycle Connect</h1>
+        <p class="tagline">Bienvenue sur l'application Upcycle Connect</p>
       </div>
 
       <nav>
@@ -66,11 +65,7 @@ header {
   background-color: var(--color-primary);
   padding: 1.5rem 2rem;
 }
-.logo {
-  height: 120px;
-  filter: brightness(0) invert(1);
-  margin-right: 1rem;
-}
+
 
 .header-top {
   display: flex;
