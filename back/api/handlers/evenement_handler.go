@@ -42,7 +42,11 @@ func CreateEvenement(c *gin.Context) {
 
 func GetEvenements(c *gin.Context) {
 	var evenements []models.Evenement
-	database.DB.Find(&evenements)
+	result := database.DB.Find(&evenements)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur de base de données"})
+		return
+	}
 	c.JSON(http.StatusOK, evenements)
 }
 
@@ -79,7 +83,11 @@ func UpdateEvenement(c *gin.Context) {
 	delete(input, "id")
 	delete(input, "ID")
 
-	database.DB.Model(&evenement).Updates(input)
+	result = database.DB.Model(&evenement).Updates(input)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Impossible de modifier l'événement"})
+		return
+	}
 	c.JSON(http.StatusOK, evenement)
 }
 
@@ -93,6 +101,10 @@ func DeleteEvenement(c *gin.Context) {
 		return
 	}
 
-	database.DB.Delete(&evenement)
+	result = database.DB.Delete(&evenement)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Impossible de supprimer l'événement"})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{"message": "Événement supprimé"})
 }

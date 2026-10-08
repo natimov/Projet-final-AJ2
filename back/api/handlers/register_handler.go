@@ -25,6 +25,10 @@ func Register(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Requête invalide"})
 		return
 	}
+	if input.Nom == "" || input.Prenom == "" || input.Email == "" || input.Password == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Nom, prénom, email et mot de passe sont obligatoires"})
+		return
+	}
 
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(input.Password), bcrypt.DefaultCost)
 	if err != nil {

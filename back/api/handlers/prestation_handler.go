@@ -8,9 +8,10 @@ import (
 	"meridian/back/api/database"
 	"meridian/back/api/models"
 )
+
 func CreatePrestation(c *gin.Context) {
 	var input struct {
-		Nom                string  `json:"nom"`
+		Nom               string  `json:"nom"`
 		Description       string  `json:"description"`
 		Prix              float64 `json:"prix"`
 		Duree             int     `json:"duree"`
@@ -19,12 +20,12 @@ func CreatePrestation(c *gin.Context) {
 		Lieu              string  `json:"lieu"`
 		ImageIllustration string  `json:"image_illustration"`
 		Statut            string  `json:"statut"`
+		CategorieID       uint    `json:"categorie_id"`
 	}
 	if err := c.ShouldBindJSON(&input); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Requête invalide"})
 		return
 	}
-
 
 	prestation := models.Prestation{
 		Nom:               input.Nom,
@@ -36,6 +37,7 @@ func CreatePrestation(c *gin.Context) {
 		Lieu:              input.Lieu,
 		ImageIllustration: input.ImageIllustration,
 		Statut:            input.Statut,
+		CategorieID:       input.CategorieID,
 	}
 
 	result := database.DB.Create(&prestation)
@@ -49,10 +51,13 @@ func CreatePrestation(c *gin.Context) {
 
 func GetPrestations(c *gin.Context) {
 	var prestations []models.Prestation
-	database.DB.Find(&prestations)
+	result := database.DB.Find(&prestations)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur de base de données"})
+		return
+	}
 	c.JSON(http.StatusOK, prestations)
 }
-
 
 func GetPrestation(c *gin.Context) {
 	id := c.Param("id")
@@ -66,7 +71,6 @@ func GetPrestation(c *gin.Context) {
 
 	c.JSON(http.StatusOK, prestation)
 }
-
 
 func UpdatePrestation(c *gin.Context) {
 	id := c.Param("id")
@@ -105,10 +109,13 @@ func UpdatePrestation(c *gin.Context) {
 	prestation.ImageIllustration = input.ImageIllustration
 	prestation.Statut = input.Statut
 
-	database.DB.Save(&prestation)
+	result = database.DB.Save(&prestation)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur de base de données"})
+		return
+	}
 	c.JSON(http.StatusOK, prestation)
 }
-
 
 func DeletePrestation(c *gin.Context) {
 	id := c.Param("id")
@@ -120,6 +127,10 @@ func DeletePrestation(c *gin.Context) {
 		return
 	}
 
-	database.DB.Delete(&prestation)
+	result = database.DB.Delete(&prestation)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur de base de données"})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{"message": "Prestation supprimée"})
 }

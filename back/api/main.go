@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"meridian/back/api/database"
 	"meridian/back/api/middlewares"
 
@@ -14,5 +15,7 @@ func main() {
 
 	setupRoutes(router)
 
-	router.Run(":8080")
+	if err := router.Run(":8080"); err != nil {
+		log.Fatal("Erreur de démarrage du serveur : ", err)
+	}
 }

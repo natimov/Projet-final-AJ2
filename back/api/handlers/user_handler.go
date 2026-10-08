@@ -75,7 +75,11 @@ func GetUsers(c *gin.Context) {
 		query = query.Where("role = ?", role)
 	}
 
-	query.Find(&users)
+	result := query.Find(&users)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur de base de données"})
+		return
+	}
 	c.JSON(http.StatusOK, users)
 }
 
@@ -91,7 +95,6 @@ func GetUser(c *gin.Context) {
 
 	c.JSON(http.StatusOK, user)
 }
-
 
 func UpdateUser(c *gin.Context) {
 	id := c.Param("id")
@@ -114,7 +117,11 @@ func UpdateUser(c *gin.Context) {
 	delete(input, "id")
 	delete(input, "ID")
 
-	database.DB.Model(&user).Updates(input)
+	result = database.DB.Model(&user).Updates(input)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Impossible de modifier l'utilisateur"})
+		return
+	}
 	c.JSON(http.StatusOK, user)
 }
 func DeleteUser(c *gin.Context) {
@@ -127,6 +134,10 @@ func DeleteUser(c *gin.Context) {
 		return
 	}
 
-	database.DB.Delete(&user)
+	result = database.DB.Delete(&user)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Impossible de supprimer l'utilisateur"})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{"message": "Utilisateur supprimé"})
 }

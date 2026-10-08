@@ -1,12 +1,14 @@
 package handlers
 
 import (
+	"errors"
 	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
 
 	"meridian/back/api/config"
 	"meridian/back/api/database"
@@ -26,8 +28,14 @@ func Login(c *gin.Context) {
 
 	var user models.User
 	result := database.DB.Where("email = ?", input.Email).First(&user)
-	if result.Error != nil {
+
+	if errors.Is(result.Error, gorm.ErrRecordNotFound) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Identifiants incorrects"})
+		return
+	}
+
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Base de données"})
 		return
 	}
 

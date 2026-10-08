@@ -41,7 +41,13 @@ func AuthRequired() gin.HandlerFunc {
 			return
 		}
 
-		userID := uint(claims["user_id"].(float64))
+		id, ok := claims["user_id"].(float64)
+		if !ok {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Token invalide"})
+			c.Abort()
+			return
+		}
+		userID := uint(id)
 
 		var user models.User
 		result := database.DB.First(&user, userID)

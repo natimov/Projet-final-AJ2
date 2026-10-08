@@ -34,7 +34,11 @@ func CreateCategoriePrestation(c *gin.Context) {
 
 func GetCategoriesPrestation(c *gin.Context) {
 	var categories []models.CategoriePrestation
-	database.DB.Find(&categories)
+	result := database.DB.Find(&categories)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erreur de base de données"})
+		return
+	}
 	c.JSON(http.StatusOK, categories)
 }
 
@@ -72,7 +76,12 @@ func UpdateCategoriePrestation(c *gin.Context) {
 
 	categorie.Libelle = input.Libelle
 
-	database.DB.Save(&categorie)
+	result = database.DB.Save(&categorie)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Impossible de modifier la catégorie"})
+		return
+	}
+
 	c.JSON(http.StatusOK, categorie)
 }
 
@@ -86,6 +95,10 @@ func DeleteCategoriePrestation(c *gin.Context) {
 		return
 	}
 
-	database.DB.Delete(&categorie)
+	result = database.DB.Delete(&categorie)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Impossible de supprimer la catégorie"})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{"message": "Catégorie supprimée"})
 }
