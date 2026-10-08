@@ -1,65 +1,72 @@
-# UpcycleConnect
+# Projet-final-AJ2 — Meridian Tech
 
-Projet composé d'une API en Go avec Gin et GORM, d'une base SQLite et d'une interface Vue.js.
+Back en Go natif (Gin, GORM, golang-jwt, bcrypt). Front en Vue.js.
 
-## Prérequis
+## Prérequis à installer
 
-- Go (la version du module est indiquée dans `back/api/go.mod`)
-- Node.js 22.18 ou plus récent et npm (voir `front/package.json`)
+- Node.js v24 (LTS) — nodejs.org
+- Go 1.27 — go.dev/dl
+- Postman (pour tester l'API) — postman.com/downloads
 
-## Configuration et lancement
+Vérifier les versions après installation :
 
-### Backend
-
-Dans `back/api`, créez un fichier `.env` contenant une clé JWT :
-
-```env
-JWT_SECRET=une-cle-secrete-personnelle
+```
+node -v      # doit afficher v24.x
+go version   # doit afficher go1.27.x
 ```
 
-Installez et lancez l'API depuis ce dossier :
+## Cloner le projet
 
-```powershell
-go mod download
+```
+git clone https://github.com/natimov/Projet-final-AJ2.git
+cd Projet-final-AJ2
+git checkout dev
+```
+
+## Installer le back (back/api)
+
+```
+cd back/api
+copy .env.exemple .env
+```
+
+Ouvrir le fichier `.env` créé et remplacer la valeur de `JWT_SECRET` par une vraie clé secrète (n'importe quelle chaîne de caractères longue suffit en local).
+
+```
 go run .
 ```
 
-L'API écoute sur `http://localhost:8080`. SQLite crée ou utilise `back/api/meridian.db`. Les tables sont préparées au démarrage par GORM.
+Les dépendances (Gin, GORM, golang-jwt, bcrypt...) se téléchargent automatiquement au premier lancement.
 
-### Frontend
+## Installer le front (front)
 
-Dans un autre terminal, depuis `front` :
+```
+cd ../front
+npm install --legacy-peer-deps
+```
 
-```powershell
-npm install
+Le `--legacy-peer-deps` est nécessaire à cause d'un conflit de versions entre `oxlint` et `eslint-plugin-oxlint`.
+
+## Lancer le projet (2 terminaux séparés)
+
+```
+cd back/api
+go run .
+```
+
+```
+cd front
 npm run dev
 ```
 
-Vite affiche l'adresse locale, généralement `http://localhost:5173`.
+- API : http://localhost:8080
+- Front : http://localhost:5173
 
-## Tests backend
+## Conventions
 
-Depuis `back/api` :
+- Jamais de push direct sur `main`
+- Respecter la convention de nomage des commit (voir le PDF )
+- Créer une branche par feature (ou groupe de feature )
+- Merge sur dev uniquement si la feature est approuvée
 
-```powershell
-go test ./...
-```
-
-Les tests d'intégration utilisent des fichiers SQLite temporaires et ne réutilisent pas `meridian.db`.
-
-## Structure
-
-- `back/api/main.go` et `routes.go` : démarrage et routes de l'API
-- `back/api/handlers` : traitement des requêtes
-- `back/api/middlewares` : authentification, contrôle admin et CORS
-- `back/api/models` : modèles GORM
-- `back/api/database` : connexion SQLite et migrations
-- `front/src` : application Vue.js
-
-## Authentification
-
-`POST /register` crée un compte particulier et `POST /login` renvoie un JWT. Les routes de gestion des utilisateurs, prestations, catégories et événements demandent un JWT d'un compte ayant le rôle `admin`. Envoyez-le dans l'en-tête `Authorization: Bearer <token>`.
-
-## Git et fichiers locaux
-
-Travaillez sur la branche de tâche convenue. Ne partagez pas `.env` et ne l'ajoutez pas à Git. La base `meridian.db` contient les données locales de développement.
+  
