@@ -1,11 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useAuthStore } from '../stores/auth'
+import { useI18n } from 'vue-i18n'
 
 const users = ref([])
 const errorMessage = ref('')
 
 const authStore = useAuthStore()
+const { t } = useI18n()
 
 async function fetchUsers() {
   errorMessage.value = ''
@@ -20,12 +22,12 @@ async function fetchUsers() {
     }
 
     users.value = await response.json()
-  } catch (error) {
-    errorMessage.value = error.message
+  } catch {
+    errorMessage.value = t('admin.loadError')
   }
 }
 async function deleteUser(id) {
-  if (!confirm('Supprimer cet utilisateur ?')) {
+  if (!confirm(t('admin.confirmDelete'))) {
     return
   }
 
@@ -40,8 +42,8 @@ async function deleteUser(id) {
     }
 
     users.value = users.value.filter((user) => user.ID !== id)
-  } catch (error) {
-    errorMessage.value = error.message
+  } catch {
+    errorMessage.value = t('admin.deleteError')
   }
 }
 const editingUserId = ref(null)
@@ -75,8 +77,8 @@ async function saveEdit(id) {
     const index = users.value.findIndex((user) => user.ID === id)
     users.value[index] = updatedUser
     editingUserId.value = null
-  } catch (error) {
-    errorMessage.value = error.message
+  } catch {
+    errorMessage.value = t('admin.saveError')
   }
 }
 
@@ -85,18 +87,18 @@ onMounted(fetchUsers)
 
 <template>
   <div>
-    <h1>Utilisateurs</h1>
+    <h1>{{ t('admin.usersTitle') }}</h1>
 
     <p v-if="errorMessage">{{ errorMessage }}</p>
 
     <table v-else>
       <thead>
         <tr>
-          <th>Nom</th>
-          <th>Prénom</th>
-          <th>Email</th>
-          <th>Rôle</th>
-          <th>Actions</th>
+          <th>{{ t('admin.lastName') }}</th>
+          <th>{{ t('admin.firstName') }}</th>
+          <th>{{ t('admin.email') }}</th>
+          <th>{{ t('admin.role') }}</th>
+          <th>{{ t('admin.actions') }}</th>
         </tr>
       </thead>
       <tbody>
@@ -107,8 +109,8 @@ onMounted(fetchUsers)
             <td><input v-model="editForm.email" /></td>
             <td><input v-model="editForm.role" /></td>
             <td>
-              <button @click="saveEdit(user.ID)">Enregistrer</button>
-              <button @click="cancelEdit">Annuler</button>
+              <button @click="saveEdit(user.ID)">{{ t('admin.save') }}</button>
+              <button @click="cancelEdit">{{ t('admin.cancel') }}</button>
             </td>
           </template>
           <template v-else>
@@ -117,8 +119,8 @@ onMounted(fetchUsers)
             <td>{{ user.email }}</td>
             <td>{{ user.role }}</td>
             <td>
-              <button @click="startEdit(user)">Modifier</button>
-              <button @click="deleteUser(user.ID)">Supprimer</button>
+              <button @click="startEdit(user)">{{ t('admin.edit') }}</button>
+              <button @click="deleteUser(user.ID)">{{ t('admin.delete') }}</button>
             </td>
           </template>
         </tr>

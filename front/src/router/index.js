@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import AdminUsersView from '../views/AdminUsersView.vue'
+import ComingSoonView from '../views/ComingSoonView.vue'
 import { useAuthStore } from '../stores/auth'
 
 const router = createRouter({
@@ -30,6 +31,30 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: RegisterView,
+    },
+    {
+      path: '/espace-particulier',
+      name: 'particular-space',
+      component: ComingSoonView,
+      meta: { titleKey: 'spaces.particular' },
+    },
+    {
+      path: '/espace-professionnel',
+      name: 'professional-space',
+      component: ComingSoonView,
+      meta: { titleKey: 'spaces.professional' },
+    },
+    {
+      path: '/espace-salarie',
+      name: 'employee-space',
+      component: ComingSoonView,
+      meta: { titleKey: 'spaces.employee' },
+    },
+    {
+      path: '/admin',
+      name: 'admin-home',
+      component: ComingSoonView,
+      meta: { titleKey: 'spaces.admin' },
     },
     {
       path: '/admin/utilisateurs',

@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/auth'
 import { useRouter, useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const email = ref('')
 const password = ref('')
@@ -10,6 +11,7 @@ const errorMessage = ref('')
 const authStore = useAuthStore()
 const router = useRouter()
 const route = useRoute()
+const { t } = useI18n()
 
 async function handleSubmit() {
   errorMessage.value = ''
@@ -17,30 +19,30 @@ async function handleSubmit() {
   try {
     await authStore.login(email.value, password.value)
     router.push(route.query.redirect || '/')
-  } catch (error) {
-    errorMessage.value = error.message
+  } catch {
+    errorMessage.value = t('auth.loginError')
   }
 }
 </script>
 
 <template>
   <div>
-    <h1>Connexion</h1>
+    <h1>{{ t('auth.loginTitle') }}</h1>
 
     <form @submit.prevent="handleSubmit">
       <div>
-        <label for="email">Email</label>
+        <label for="email">{{ t('auth.email') }}</label>
         <input id="email" v-model="email" type="email" required />
       </div>
 
       <div>
-        <label for="password">Mot de passe</label>
+        <label for="password">{{ t('auth.password') }}</label>
         <input id="password" v-model="password" type="password" required />
       </div>
 
       <p v-if="errorMessage">{{ errorMessage }}</p>
 
-      <button type="submit">Se connecter</button>
+      <button type="submit">{{ t('auth.loginButton') }}</button>
     </form>
   </div>
 </template>
