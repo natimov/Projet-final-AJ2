@@ -53,14 +53,13 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'admin-home',
-      component: ComingSoonView,
-      meta: { titleKey: 'spaces.admin' },
+      component: AdminUsersView,
+      meta: { requiresAdmin: true },
     },
     {
       path: '/admin/utilisateurs',
       name: 'admin-users',
-      component: AdminUsersView,
-      meta: { requiresAdmin: true },
+      redirect: '/admin',
     },
   ],
 })

@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', () => {
   const token = ref(localStorage.getItem('token'))
-  const user = ref(null)
+  const savedUser = localStorage.getItem('user')
+  const user = ref(savedUser ? JSON.parse(savedUser) : null)
 
   async function login(email, password) {
     const response = await fetch('http://localhost:8080/login', {
@@ -20,12 +21,14 @@ export const useAuthStore = defineStore('auth', () => {
     token.value = data.token
     user.value = data.user
     localStorage.setItem('token', data.token)
+    localStorage.setItem('user', JSON.stringify(data.user))
   }
 
   function logout() {
     token.value = null
     user.value = null
     localStorage.removeItem('token')
+    localStorage.removeItem('user')
 
   }
   async function register(payload) {
