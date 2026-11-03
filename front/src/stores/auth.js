@@ -3,11 +3,15 @@ import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', () => {
   const token = ref(localStorage.getItem('token'))
+<<<<<<< HEAD
   const savedUser = localStorage.getItem('user')
   const user = ref(savedUser ? JSON.parse(savedUser) : null)
+=======
+  const user = ref(JSON.parse(localStorage.getItem('user') || 'null'))
+>>>>>>> origin/dev
 
   async function login(email, password) {
-    const response = await fetch('http://localhost:8080/login', {
+    const response = await fetch('/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -32,7 +36,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   }
   async function register(payload) {
-    const response = await fetch('http://localhost:8080/register', {
+    const response = await fetch('/api/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),

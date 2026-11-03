@@ -1,5 +1,5 @@
 <script setup>
-import { computed, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -23,6 +23,29 @@ watch(
   },
   { immediate: true },
 )
+import { useAuthStore } from './stores/auth'
+
+const authStore = useAuthStore()
+import { useRouter } from 'vue-router'
+import { onClickOutside } from '@vueuse/core'
+
+const router = useRouter()
+const showMenu = ref(false)
+const profileRef = ref(null)
+
+function toggleMenu() {
+  showMenu.value = !showMenu.value
+}
+
+function handleLogout() {
+  authStore.logout()
+  showMenu.value = false
+  router.push('/login')
+}
+
+onClickOutside(profileRef, () => {
+  showMenu.value = false
+})
 </script>
 
 <template>
@@ -50,8 +73,22 @@ watch(
             </option>
           </select>
         </label>
-        <RouterLink to="/login">{{ t('common.login') }}</RouterLink>
-        <RouterLink class="register-link" to="/register">{{ t('common.register') }}</RouterLink>
+                <template v-if="!authStore.user">
+          <RouterLink to="/login">{{ t('common.login') }}</RouterLink>
+          <RouterLink class="register-link" to="/register">{{ t('common.register') }}</RouterLink>
+        </template>
+
+        <div v-else class="profile" ref="profileRef" @click="toggleMenu">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+          </svg>
+          <span>{{ authStore.user.prenom }}</span>
+
+          <div v-if="showMenu" class="dropdown">
+            <button @click="handleLogout">Se déconnecter</button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -215,4 +252,37 @@ nav a:focus-visible,
     gap: 0.75rem;
   }
 }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    gap: 0.2rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .dropdown button {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: none;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 </style>

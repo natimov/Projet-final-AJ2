@@ -13,7 +13,7 @@ async function fetchUsers() {
   errorMessage.value = ''
 
   try {
-    const response = await fetch('http://localhost:8080/users', {
+    const response = await fetch('/api/users', {
       headers: { Authorization: `Bearer ${authStore.token}` },
     })
 
@@ -32,7 +32,7 @@ async function deleteUser(id) {
   }
 
   try {
-    const response = await fetch(`http://localhost:8080/users/${id}`, {
+    const response = await fetch(`/api/users/${id}`, {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${authStore.token}` },
     })
@@ -60,7 +60,7 @@ function cancelEdit() {
 
 async function saveEdit(id) {
   try {
-    const response = await fetch(`http://localhost:8080/users/${id}`, {
+    const response = await fetch(`/api/users/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
