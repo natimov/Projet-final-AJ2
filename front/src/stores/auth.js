@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', () => {
   const token = ref(localStorage.getItem('token'))
-  const user = ref(JSON.parse(localStorage.getItem('user') || 'null'))
+  const savedUser = localStorage.getItem('user')
+  const user = ref(savedUser ? JSON.parse(savedUser) : null)
 
   async function login(email, password) {
     const response = await fetch('/api/login', {

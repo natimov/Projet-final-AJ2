@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
+import { useI18n } from 'vue-i18n'
 
 const nom = ref('')
 const prenom = ref('')
@@ -14,6 +15,7 @@ const errorMessage = ref('')
 
 const authStore = useAuthStore()
 const router = useRouter()
+const { t } = useI18n()
 
 async function handleSubmit() {
   errorMessage.value = ''
@@ -29,55 +31,55 @@ async function handleSubmit() {
       ville: ville.value,
     })
     router.push('/login')
-  } catch (error) {
-    errorMessage.value = error.message
+  } catch {
+    errorMessage.value = t('auth.registerError')
   }
 }
 </script>
 
 <template>
   <div>
-    <h1>Créer un compte</h1>
+    <h1>{{ t('auth.registerTitle') }}</h1>
 
     <form @submit.prevent="handleSubmit">
       <div>
-        <label for="nom">Nom</label>
+        <label for="nom">{{ t('auth.lastName') }}</label>
         <input id="nom" v-model="nom" type="text" required />
       </div>
 
       <div>
-        <label for="prenom">Prénom</label>
+        <label for="prenom">{{ t('auth.firstName') }}</label>
         <input id="prenom" v-model="prenom" type="text" required />
       </div>
 
       <div>
-        <label for="email">Email</label>
+        <label for="email">{{ t('auth.email') }}</label>
         <input id="email" v-model="email" type="email" required />
       </div>
 
       <div>
-        <label for="password">Mot de passe</label>
+        <label for="password">{{ t('auth.password') }}</label>
         <input id="password" v-model="password" type="password" required />
       </div>
 
       <div>
-        <label for="telephone">Téléphone</label>
+        <label for="telephone">{{ t('auth.phone') }}</label>
         <input id="telephone" v-model="telephone" type="tel" />
       </div>
 
       <div>
-        <label for="adresse">Adresse</label>
+        <label for="adresse">{{ t('auth.address') }}</label>
         <input id="adresse" v-model="adresse" type="text" />
       </div>
 
       <div>
-        <label for="ville">Ville</label>
+        <label for="ville">{{ t('auth.city') }}</label>
         <input id="ville" v-model="ville" type="text" />
       </div>
 
       <p v-if="errorMessage">{{ errorMessage }}</p>
 
-      <button type="submit">Créer mon compte</button>
+      <button type="submit">{{ t('auth.registerButton') }}</button>
     </form>
   </div>
 </template>
