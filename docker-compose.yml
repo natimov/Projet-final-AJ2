@@ -1,0 +1,16 @@
+services:
+  api:
+    build: ./back/api
+    container_name: meridian-api
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+
+  front:
+    build: ./front
+    container_name: meridian-front
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    depends_on:
+      - api
