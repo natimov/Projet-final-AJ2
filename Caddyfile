@@ -1,0 +1,3 @@
+upcycleconnect-esgi.duckdns.org {
+    reverse_proxy front:80
+}
