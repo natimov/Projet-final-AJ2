@@ -150,55 +150,6 @@
       "beginner": "Débutant",
       "intermediate": "Intermédiaire",
       "expert": "Expert"
-  "particular": {
-    "greeting": "Bonjour, {name} !",
-    "member": "membre",
-    "nameLabel": "Nom et prénom",
-    "emailLabel": "Adresse e-mail",
-    "phoneLabel": "Téléphone",
-    "addressLabel": "Adresse",
-    "cityLabel": "Ville",
-    "statusLabel": "Statut du compte",
-    "demoTitle": "Aperçu local",
-    "demoText": "Les exemples et les actions de cet aperçu restent dans ce navigateur. Aucune réservation, demande ni paiement réel.",
-    "startDemo": "Essayer avec des exemples",
-    "exitDemo": "Quitter l’aperçu",
-    "search": "Rechercher",
-    "all": "Toutes les options",
-    "storageError": "Le navigateur n’a pas pu enregistrer ce changement. Vérifiez l’espace disponible ou les réglages de stockage.",
-    "scoreUnavailable": "Vos indicateurs d’impact ne sont pas encore disponibles dans votre espace.",
-    "sections": {
-      "overview": "Vue d’ensemble",
-      "listings": "Mes annonces",
-      "deposits": "Dépôts en conteneur",
-      "advice": "Conseils",
-      "catalogue": "Catalogue",
-      "planning": "Mon planning",
-      "score": "Upcycling Score",
-      "profile": "Mes informations"
-    },
-    "overview": {
-      "listings": "Préparez et retrouvez vos annonces de don ou de vente.",
-      "deposits": "Décrivez un objet à déposer et retrouvez le suivi de vos demandes.",
-      "advice": "Trouvez des idées et des gestes simples pour réutiliser vos objets.",
-      "catalogue": "Consultez les formations, ateliers, événements et services.",
-      "planning": "Retrouvez vos activités et les dates limites de dépôt.",
-      "score": "Suivez l’impact de vos actions de réemploi.",
-      "profile": "Consultez les coordonnées associées à votre compte."
-    },
-    "accountStates": {
-      "actif": "Actif",
-      "suspendu": "Suspendu",
-      "banni": "Banni",
-      "unknown": "Indisponible"
-    },
-    "metrics": {
-      "scoreValue": "Points",
-      "objects": "Objets réemployés",
-      "waste": "Déchets évités (kg)",
-      "carbon": "CO₂ économisé (kg)",
-      "badge": "Badge",
-      "starter": "Débutant"
     },
     "categories": {
       "wood": "Bois",
@@ -257,6 +208,130 @@
       "formTitle": "Informations sur l’événement",
       "starts": "Début",
       "ends": "Fin",
+      "view": "Afficher par",
+      "day": "Jour",
+      "week": "Semaine",
+      "month": "Mois",
+      "date": "Date",
+      "previous": "Précédent",
+      "today": "Aujourd’hui",
+      "next": "Suivant",
+      "empty": "Aucune activité pour cette période.",
+      "emptyDrafts": "Aucun brouillon local pour cette période.",
+      "export": "Exporter le planning (.ics)",
+      "reminder": "Le fichier comprend un rappel la veille, utilisable dans votre calendrier.",
+      "browserReminderHint": "Vous pouvez activer les rappels du navigateur pour les activités à venir. Ils fonctionnent tant que cette page de planning reste ouverte ; les brouillons locaux sont exclus.",
+      "enableReminders": "Activer les rappels du navigateur",
+      "reminderTitle": "Rappel UpcycleConnect",
+      "reminderStates": {
+        "active": "Rappels actifs sur cette page.",
+        "denied": "Les notifications ne sont pas autorisées dans le navigateur.",
+        "unavailable": "Les notifications ne sont pas disponibles dans ce navigateur."
+      }
+    },
+    "advice": {
+      "intro": "Préparez et classez les conseils et les actualités destinés à la communauté.",
+      "new": "Nouveau contenu",
+      "formTitle": "Informations sur le contenu",
+      "content": "Contenu",
+      "keywords": "Mots-clés",
+      "scheduledFor": "Date de publication différée",
+      "saveDraft": "Enregistrer le brouillon",
+      "publishReal": "Publication indisponible",
+      "scheduleReal": "Programmation indisponible",
+      "archive": "Archiver",
+      "empty": "Aucun contenu ne correspond à votre recherche.",
+      "emptyDrafts": "Aucun brouillon local ne correspond à votre recherche.",
+      "status": {
+        "draft": "Brouillon",
+        "scheduled": "Programmé",
+        "published": "Publié",
+        "archived": "Archivé"
+      }
+    },
+    "moderation": {
+      "view": "Afficher",
+      "reports": "Signalements",
+      "discussions": "Discussions",
+      "intro": "Examinez les signalements et consultez l’historique des décisions."
+    },
+    "tutorial": {
+      "open": "Guide de visite",
+      "progress": "Étape {current} sur {total}",
+      "skip": "Quitter le guide",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "finish": "Terminer",
+      "steps": {
+        "overview": "Bienvenue dans votre espace. Le menu donne accès aux différentes rubriques.",
+        "training": "Préparez vos sessions et suivez leur validation ainsi que les inscriptions.",
+        "planning": "Consultez les activités par jour, semaine ou mois.",
+        "advice": "Rédigez et classez les conseils et actualités.",
+        "moderation": "Examinez les signalements et retrouvez l’historique des actions."
+      }
+    }
+  },
+  "spaces": {
+    "label": "ESPACE EN PRÉPARATION",
+    "comingSoon": "Bientôt disponible",
+    "particular": "Espace particulier",
+    "professional": "Espace professionnel et artisan",
+    "employee": "Espace salarié",
+    "admin": "Espace Admin"
+  },
+  "particular": {
+    "greeting": "Bonjour, {name} !",
+    "member": "membre",
+    "nameLabel": "Nom et prénom",
+    "emailLabel": "Adresse e-mail",
+    "phoneLabel": "Téléphone",
+    "addressLabel": "Adresse",
+    "cityLabel": "Ville",
+    "statusLabel": "Statut du compte",
+    "demoTitle": "Aperçu local",
+    "demoText": "Les exemples et les actions de cet aperçu restent dans ce navigateur. Aucune réservation, demande ni paiement réel.",
+    "startDemo": "Essayer avec des exemples",
+    "exitDemo": "Quitter l’aperçu",
+    "search": "Rechercher",
+    "all": "Toutes les options",
+    "storageError": "Le navigateur n’a pas pu enregistrer ce changement. Vérifiez l’espace disponible ou les réglages de stockage.",
+    "scoreUnavailable": "Vos indicateurs d’impact ne sont pas encore disponibles dans votre espace.",
+    "sections": {
+      "overview": "Vue d’ensemble",
+      "listings": "Mes annonces",
+      "deposits": "Dépôts en conteneur",
+      "advice": "Conseils",
+      "catalogue": "Catalogue",
+      "planning": "Mon planning",
+      "score": "Upcycling Score",
+      "profile": "Mes informations"
+    },
+    "overview": {
+      "listings": "Préparez et retrouvez vos annonces de don ou de vente.",
+      "deposits": "Décrivez un objet à déposer et retrouvez le suivi de vos demandes.",
+      "advice": "Trouvez des idées et des gestes simples pour réutiliser vos objets.",
+      "catalogue": "Consultez les formations, ateliers, événements et services.",
+      "planning": "Retrouvez vos activités et les dates limites de dépôt.",
+      "score": "Suivez l’impact de vos actions de réemploi.",
+      "profile": "Consultez les coordonnées associées à votre compte."
+    },
+    "accountStates": {
+      "actif": "Actif",
+      "suspendu": "Suspendu",
+      "banni": "Banni",
+      "unknown": "Indisponible"
+    },
+    "metrics": {
+      "scoreValue": "Points",
+      "objects": "Objets réemployés",
+      "waste": "Déchets évités (kg)",
+      "carbon": "CO₂ économisé (kg)",
+      "badge": "Badge",
+      "starter": "Débutant"
+    },
+    "categories": {
+      "wood": "Bois",
+      "metal": "Métal",
       "tutorials": "Tutoriels",
       "ideas": "Astuces",
       "textile": "Textile",
@@ -391,48 +466,6 @@
       "day": "Jour",
       "week": "Semaine",
       "month": "Mois",
-      "date": "Date",
-      "previous": "Précédent",
-      "today": "Aujourd’hui",
-      "next": "Suivant",
-      "empty": "Aucune activité pour cette période.",
-      "emptyDrafts": "Aucun brouillon local pour cette période.",
-      "export": "Exporter le planning (.ics)",
-      "reminder": "Le fichier comprend un rappel la veille, utilisable dans votre calendrier.",
-      "browserReminderHint": "Vous pouvez activer les rappels du navigateur pour les activités à venir. Ils fonctionnent tant que cette page de planning reste ouverte ; les brouillons locaux sont exclus.",
-      "enableReminders": "Activer les rappels du navigateur",
-      "reminderTitle": "Rappel UpcycleConnect",
-      "reminderStates": {
-        "active": "Rappels actifs sur cette page.",
-        "denied": "Les notifications ne sont pas autorisées dans le navigateur.",
-        "unavailable": "Les notifications ne sont pas disponibles dans ce navigateur."
-      }
-    },
-    "advice": {
-      "intro": "Préparez et classez les conseils et les actualités destinés à la communauté.",
-      "new": "Nouveau contenu",
-      "formTitle": "Informations sur le contenu",
-      "content": "Contenu",
-      "keywords": "Mots-clés",
-      "scheduledFor": "Date de publication différée",
-      "saveDraft": "Enregistrer le brouillon",
-      "publishReal": "Publication indisponible",
-      "scheduleReal": "Programmation indisponible",
-      "archive": "Archiver",
-      "empty": "Aucun contenu ne correspond à votre recherche.",
-      "emptyDrafts": "Aucun brouillon local ne correspond à votre recherche.",
-      "status": {
-        "draft": "Brouillon",
-        "scheduled": "Programmé",
-        "published": "Publié",
-        "archived": "Archivé"
-      }
-    },
-    "moderation": {
-      "view": "Afficher",
-      "reports": "Signalements",
-      "discussions": "Discussions",
-      "intro": "Examinez les signalements et consultez l’historique des décisions."
       "date": "Date du planning",
       "today": "Aujourd’hui",
       "empty": "Aucune activité dans cette période.",
@@ -449,11 +482,6 @@
       "next": "Suivant",
       "finish": "Terminer",
       "steps": {
-        "overview": "Bienvenue dans votre espace. Le menu donne accès aux différentes rubriques.",
-        "training": "Préparez vos sessions et suivez leur validation ainsi que les inscriptions.",
-        "planning": "Consultez les activités par jour, semaine ou mois.",
-        "advice": "Rédigez et classez les conseils et actualités.",
-        "moderation": "Examinez les signalements et retrouvez l’historique des actions."
         "overview": "Utilisez le menu de votre espace pour retrouver vos démarches et vos activités.",
         "listings": "Dans Mes annonces, préparez la description et les photos d’un objet à donner ou à vendre.",
         "deposits": "Dans Dépôts en conteneur, préparez votre demande et retrouvez les codes et la date limite après validation.",
@@ -463,13 +491,5 @@
         "score": "Dans Upcycling Score, consultez vos points, votre badge et vos indicateurs de réemploi."
       }
     }
-  },
-  "spaces": {
-    "label": "ESPACE EN PRÉPARATION",
-    "comingSoon": "Bientôt disponible",
-    "particular": "Espace particulier",
-    "professional": "Espace professionnel et artisan",
-    "employee": "Espace salarié",
-    "admin": "Espace Admin"
   }
 }
