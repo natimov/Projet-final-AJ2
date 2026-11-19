@@ -47,8 +47,7 @@ const router = createRouter({
     {
       path: '/espace-salarie',
       name: 'employee-space',
-      component: ComingSoonView,
-      meta: { titleKey: 'spaces.employee' },
+      component: () => import('../views/SalarieView.vue'),
     },
     {
       path: '/admin',
