@@ -35,8 +35,8 @@ const router = createRouter({
     {
       path: '/espace-particulier',
       name: 'particular-space',
-      component: ComingSoonView,
-      meta: { titleKey: 'spaces.particular' },
+      component: () => import('../views/ParticulierView.vue'),
+      meta: { requiresRole: 'particulier' },
     },
     {
       path: '/espace-professionnel',
@@ -63,6 +63,18 @@ const router = createRouter({
   ],
 })
 router.beforeEach((to) => {
+  if (to.meta.requiresRole) {
+    const authStore = useAuthStore()
+
+    if (!authStore.user) {
+      return { path: '/login', query: { redirect: to.fullPath } }
+    }
+
+    if (authStore.user.role !== to.meta.requiresRole) {
+      return { path: '/' }
+    }
+  }
+
   if (to.meta.requiresAdmin) {
     const authStore = useAuthStore()
 
