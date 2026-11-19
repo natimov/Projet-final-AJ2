@@ -81,6 +81,219 @@
     "saveError": "Unable to update this user.",
     "deleteError": "Unable to delete this user."
   },
+  "particular": {
+    "greeting": "Hello, {name}!",
+    "member": "member",
+    "nameLabel": "Full name",
+    "emailLabel": "Email address",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "cityLabel": "City",
+    "statusLabel": "Account status",
+    "demoTitle": "Local preview",
+    "demoText": "Examples and actions in this preview stay in this browser. No real bookings, requests or payments are made.",
+    "startDemo": "Try with sample data",
+    "exitDemo": "Exit preview",
+    "search": "Search",
+    "all": "All options",
+    "storageError": "Your browser could not save this change. Check your available space or storage settings.",
+    "scoreUnavailable": "Your impact figures are not available in your account yet.",
+    "sections": {
+      "overview": "Overview",
+      "listings": "My listings",
+      "deposits": "Container drop-offs",
+      "advice": "Tips",
+      "catalogue": "Catalogue",
+      "planning": "My schedule",
+      "score": "Upcycling Score",
+      "profile": "My information"
+    },
+    "overview": {
+      "listings": "Prepare and find your donation or sale listings.",
+      "deposits": "Describe an item for drop-off and track your requests.",
+      "advice": "Find practical ideas for reusing your items.",
+      "catalogue": "Browse training sessions, workshops, events and services.",
+      "planning": "See your activities and drop-off deadlines.",
+      "score": "Track the impact of your reuse activities.",
+      "profile": "View the contact details associated with your account."
+    },
+    "accountStates": {
+      "actif": "Active",
+      "suspendu": "Suspended",
+      "banni": "Banned",
+      "unknown": "Unavailable"
+    },
+    "metrics": {
+      "scoreValue": "Points",
+      "objects": "Items reused",
+      "waste": "Waste avoided (kg)",
+      "carbon": "CO₂ saved (kg)",
+      "badge": "Badge",
+      "starter": "Beginner"
+    },
+    "categories": {
+      "wood": "Wood",
+      "metal": "Metal",
+      "tutorials": "Tutorials",
+      "ideas": "Ideas",
+      "textile": "Textiles",
+      "plastic": "Plastic",
+      "other": "Other"
+    },
+    "requests": {
+      "draftsOnly": "Drafts are saved on this device. Submissions to the review team are unavailable.",
+      "newListing": "New listing",
+      "newDeposit": "New request",
+      "listingForm": "Listing details",
+      "depositForm": "Drop-off details",
+      "title": "Title",
+      "description": "Description",
+      "category": "Category",
+      "location": "Town, address or preferred location",
+      "choose": "Select",
+      "condition": "Item condition",
+      "good": "Good condition",
+      "used": "Used",
+      "repair": "Needs repair",
+      "type": "Listing type",
+      "donation": "Donation",
+      "sale": "Sale",
+      "price": "Price (€)",
+      "dimensions": "Dimensions (cm)",
+      "weight": "Weight (kg)",
+      "photos": "Photos",
+      "photoLimit": "JPG, PNG or WebP. Up to 3 photos of 400 KB each.",
+      "photo": "Photo {number}",
+      "removePhoto": "Remove photo {number}",
+      "photoError": "The selected photos could not be read.",
+      "photoRequired": "Add at least one photo before simulating submission.",
+      "required": "Fill in the required fields.",
+      "saveDraft": "Save draft",
+      "submitDemo": "Simulate submission",
+      "updateDemo": "Save simulated request",
+      "draftSaved": "Draft saved on this device.",
+      "demoSubmitted": "Simulated request. It now appears as pending in this preview.",
+      "confirmRemove": "Remove this item from this browser?",
+      "removed": "Item removed.",
+      "states": {
+        "draft": "Draft",
+        "pending": "Pending · preview",
+        "approved": "Approved · preview"
+      },
+      "noListings": "You have no listings yet.",
+      "noDeposits": "You have no drop-off requests yet.",
+      "code": "Sample access code",
+      "barcode": "Sample barcode number",
+      "deadline": "Drop-off deadline"
+    },
+    "catalogue": {
+      "loading": "Loading catalogue…",
+      "restricted": "Some or all of the catalogue is not accessible with your account yet.",
+      "error": "The full catalogue could not be loaded right now.",
+      "retry": "Retry",
+      "empty": "No activities match your search.",
+      "type": "Activity type",
+      "kinds": {
+        "workshop": "Workshop",
+        "training": "Training",
+        "event": "Event",
+        "service": "Service"
+      },
+      "endsAt": "Ends",
+      "duration": "Duration",
+      "minutes": "{count} min",
+      "seats": "Number of seats",
+      "host": "Hosted by",
+      "free": "Free",
+      "paymentPreview": "Payment summary",
+      "demoPayment": "Example total: {total}. You will not be charged.",
+      "confirmDemoPayment": "Confirm simulated booking",
+      "bookDemo": "Simulate booking",
+      "cancelDemo": "Remove from preview schedule",
+      "demoBooked": "Activity added to your preview schedule.",
+      "demoCancelled": "Activity removed from your preview schedule.",
+      "bookingUnavailable": "Online booking is currently unavailable.",
+      "samples": {
+        "workshopTitle": "Repair a wooden piece of furniture",
+        "workshopText": "Learn how to tighten a joint and repair damaged areas on a small piece of furniture.",
+        "trainingTitle": "Reuse fabric scraps",
+        "trainingText": "Learn to piece together fabric scraps to make a durable accessory.",
+        "eventTitle": "Community reuse meetup",
+        "eventText": "Swap ideas for transforming objects and see what the community has made.",
+        "serviceTitle": "Item repair consultation",
+        "serviceText": "Bring a small item to find out how it could be repaired and what tools you would need."
+      }
+    },
+    "advice": {
+      "unavailable": "Community tips are not available in your account yet.",
+      "onlySaved": "Favourites only",
+      "empty": "No tips match your search.",
+      "saved": "In your favourites",
+      "addFavourite": "Add to favourites",
+      "removeFavourite": "Remove from favourites",
+      "share": "Share this tip",
+      "shareLink": "Sample link",
+      "copied": "Link copied.",
+      "back": "Back to tips",
+      "articles": {
+        "metal": {
+          "title": "Care for a metal item",
+          "text": "Clean the item and dry it thoroughly. Check for sharp edges before reusing it."
+        },
+        "tutorials": {
+          "title": "Prepare an item before repairing it",
+          "text": "Empty and clean the item. Take a photo before removing parts so you can put them back in the right place."
+        },
+        "ideas": {
+          "title": "Sort parts before reassembly",
+          "text": "Put screws and other small parts in labelled containers as you take the item apart."
+        },
+        "wood": {
+          "title": "Strengthen a wooden chair",
+          "text": "On an unpainted wooden chair, inspect the joints. Tighten loose screws and check that the chair is stable before using it."
+        },
+        "textile": {
+          "title": "Mend a small tear",
+          "text": "Cut a patch slightly larger than the tear. Place it behind the fabric, pin it in place and sew around the opening."
+        },
+        "plastic": {
+          "title": "Turn a container into an organiser",
+          "text": "Clean an empty container in good condition, then use it to store small items. Label it so you can find what is inside."
+        }
+      }
+    },
+    "planning": {
+      "unavailable": "Your schedule does not receive confirmed bookings or drop-offs yet.",
+      "view": "View by",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "date": "Schedule date",
+      "today": "Today",
+      "empty": "No activities in this period.",
+      "depositDeadline": "Container drop-off deadline",
+      "export": "Export this period (.ics)",
+      "exportHint": "The file includes a reminder the day before each activity.",
+      "reminder": "UpcycleConnect reminder"
+    },
+    "tutorial": {
+      "open": "Take the tour",
+      "progress": "Step {current} of {total}",
+      "skip": "Exit tour",
+      "previous": "Back",
+      "next": "Next",
+      "finish": "Finish",
+      "steps": {
+        "overview": "Use your account menu to find requests and activities.",
+        "listings": "Under My listings, prepare the description and photos of an item to donate or sell.",
+        "deposits": "Under Container drop-offs, prepare a request and find the codes and deadline after approval.",
+        "advice": "Under Tips, find articles by category and view your favourites.",
+        "catalogue": "Open a catalogue entry to see the date, location and price of an activity.",
+        "planning": "Under My schedule, choose a date and view the corresponding day, week or month.",
+        "score": "Under Upcycling Score, see your points, badge and reuse figures."
+      }
+    }
+  },
   "spaces": {
     "label": "SPACE IN PROGRESS",
     "comingSoon": "Coming soon",
