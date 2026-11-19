@@ -1,0 +1,368 @@
+.particular-page {
+  --pc-green: #244b38;
+  --pc-text: #26372d;
+  --pc-muted: #4f6257;
+  --pc-line: #d9e2d6;
+  --pc-surface: #fff;
+  --pc-tint: #eaf0e4;
+  min-height: 100vh;
+  padding: clamp(1rem, 4vw, 3rem) clamp(1rem, 5vw, 4rem) 4rem;
+  background: #f8f8f3;
+  color: var(--pc-text);
+}
+
+.particular-page .particular-shell {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.particular-page h1,
+.particular-page h2,
+.particular-page h3 {
+  color: var(--pc-green);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.particular-page h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-top: 0.3rem;
+}
+
+.particular-page h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin-bottom: 0.9rem;
+}
+
+.particular-page h3 {
+  font-size: 1.02rem;
+}
+
+.particular-page :is(p, dd, dt) {
+  overflow-wrap: anywhere;
+}
+
+.particular-page p {
+  color: var(--pc-muted);
+}
+
+.particular-page strong {
+  font-weight: 700;
+}
+
+.particular-page .particular-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: clamp(1.15rem, 4vw, 2.25rem);
+  border-radius: 16px;
+  background: var(--pc-green);
+}
+
+.particular-page .particular-heading :is(h1, p) {
+  color: #fff;
+}
+
+.particular-page .particular-layout {
+  display: grid;
+  grid-template-columns: minmax(11rem, 14rem) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: 1.5rem;
+}
+
+.particular-page .p-navigation {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.4rem;
+  border: 1px solid var(--pc-line);
+  border-radius: 12px;
+  background: var(--pc-surface);
+}
+
+.particular-page .p-navigation a {
+  padding: 0.65rem 0.75rem;
+  border-radius: 7px;
+  color: var(--pc-green);
+  font-weight: 600;
+}
+
+.particular-page .p-navigation .p-current {
+  background: var(--pc-green);
+  color: #fff;
+}
+
+.particular-page .p-navigation a:not(.p-current):hover,
+.particular-page .p-button.p-secondary:hover {
+  background: var(--pc-tint);
+}
+
+.particular-page .p-section {
+  min-width: 0;
+  border-radius: 8px;
+}
+
+.particular-page .p-grid,
+.particular-page .p-rows {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.particular-page .p-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.particular-page .p-overview {
+  margin-top: 0;
+}
+
+.particular-page .p-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--pc-line);
+  border-radius: 12px;
+  background: var(--pc-surface);
+}
+
+.particular-page .p-card p {
+  margin-top: 0.45rem;
+}
+
+.particular-page .p-card a,
+.particular-page .p-back {
+  color: var(--pc-green);
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.particular-page .p-back {
+  display: inline-block;
+  margin-block: 0.75rem;
+}
+
+.particular-page .p-card-heading,
+.particular-page .p-demo,
+.particular-page .p-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.particular-page .p-card-heading,
+.particular-page .p-demo {
+  justify-content: space-between;
+}
+
+.particular-page .p-demo,
+.particular-page .p-actions,
+.particular-page .p-period,
+.particular-page .p-share {
+  margin-top: 1rem;
+}
+
+.particular-page .p-demo:has([aria-pressed="true"]),
+.particular-page .p-notice {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--pc-line);
+  border-radius: 10px;
+  background: var(--pc-tint);
+}
+
+.particular-page .p-notice {
+  margin-block: 0.75rem;
+}
+
+.particular-page .p-notice > button {
+  margin-top: 0.55rem;
+}
+
+.particular-page .p-button {
+  min-height: 2.65rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--pc-green);
+  border-radius: 8px;
+  background: var(--pc-green);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.particular-page .p-button:hover {
+  background: #345f49;
+}
+
+.particular-page .p-button.p-secondary {
+  background: var(--pc-surface);
+  color: var(--pc-green);
+}
+
+.particular-page .p-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.particular-page .p-chip {
+  display: inline-block;
+  padding: 0.16rem 0.58rem;
+  border-radius: 20px;
+  background: var(--pc-tint);
+  color: var(--pc-green);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.particular-page .p-card > .p-chip + h3 {
+  margin-top: 0.55rem;
+}
+
+.particular-page .p-filters {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1rem;
+}
+
+.particular-page .p-filters label {
+  flex: 1 1 10rem;
+  min-width: 0;
+}
+
+.particular-page .p-filters .p-checkbox {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.65rem;
+}
+
+.particular-page .p-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem;
+  margin-top: 1rem;
+}
+
+.particular-page .p-wide,
+.particular-page .p-form h3 {
+  grid-column: 1 / -1;
+}
+
+.particular-page :is(label, dt) {
+  color: var(--pc-muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.particular-page label {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.particular-page :is(input:not([type="checkbox"]), select, textarea) {
+  width: 100%;
+  min-height: 2.65rem;
+  min-width: 0;
+  padding: 0.42rem 0.62rem;
+  border: 1px solid #899b90;
+  border-radius: 7px;
+  background: var(--pc-surface);
+  color: var(--pc-text);
+  font: inherit;
+}
+
+.particular-page textarea {
+  resize: vertical;
+}
+
+.particular-page :focus-visible {
+  outline: 3px solid #397d58;
+  outline-offset: 3px;
+}
+
+.particular-page .particular-heading :focus-visible {
+  outline-color: #e2efb5;
+}
+
+.particular-page dd {
+  margin-top: 0.15rem;
+  font-weight: 600;
+}
+
+.particular-page .p-metrics dd {
+  color: var(--pc-green);
+  font-size: 1.25rem;
+}
+
+.particular-page .p-photos img {
+  display: block;
+  width: 6rem;
+  height: 5rem;
+  margin-bottom: 0.3rem;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.particular-page .p-details summary {
+  cursor: pointer;
+  color: var(--pc-green);
+}
+
+.particular-page .p-details summary > * {
+  margin-right: 0.5rem;
+}
+
+.particular-page .p-details[open] summary {
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--pc-line);
+}
+
+.particular-page .p-tutorial {
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: clamp(1rem, 4vw, 1.75rem);
+  border: 1px solid var(--pc-line);
+  border-radius: 14px;
+  background: var(--pc-surface);
+  color: var(--pc-text);
+}
+
+.particular-page .p-tutorial::backdrop {
+  background: #12271caa;
+}
+
+.particular-page .p-tutorial h2 {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 740px) {
+  .particular-page .particular-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .particular-page .p-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 490px) {
+  .particular-page :is(.p-grid, .p-form) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .particular-page .p-navigation a {
+    padding-inline: 0.5rem;
+  }
+}

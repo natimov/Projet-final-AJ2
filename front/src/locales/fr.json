@@ -81,6 +81,219 @@
     "saveError": "Impossible de modifier cet utilisateur.",
     "deleteError": "Impossible de supprimer cet utilisateur."
   },
+  "particular": {
+    "greeting": "Bonjour, {name} !",
+    "member": "membre",
+    "nameLabel": "Nom et prénom",
+    "emailLabel": "Adresse e-mail",
+    "phoneLabel": "Téléphone",
+    "addressLabel": "Adresse",
+    "cityLabel": "Ville",
+    "statusLabel": "Statut du compte",
+    "demoTitle": "Aperçu local",
+    "demoText": "Les exemples et les actions de cet aperçu restent dans ce navigateur. Aucune réservation, demande ni paiement réel.",
+    "startDemo": "Essayer avec des exemples",
+    "exitDemo": "Quitter l’aperçu",
+    "search": "Rechercher",
+    "all": "Toutes les options",
+    "storageError": "Le navigateur n’a pas pu enregistrer ce changement. Vérifiez l’espace disponible ou les réglages de stockage.",
+    "scoreUnavailable": "Vos indicateurs d’impact ne sont pas encore disponibles dans votre espace.",
+    "sections": {
+      "overview": "Vue d’ensemble",
+      "listings": "Mes annonces",
+      "deposits": "Dépôts en conteneur",
+      "advice": "Conseils",
+      "catalogue": "Catalogue",
+      "planning": "Mon planning",
+      "score": "Upcycling Score",
+      "profile": "Mes informations"
+    },
+    "overview": {
+      "listings": "Préparez et retrouvez vos annonces de don ou de vente.",
+      "deposits": "Décrivez un objet à déposer et retrouvez le suivi de vos demandes.",
+      "advice": "Trouvez des idées et des gestes simples pour réutiliser vos objets.",
+      "catalogue": "Consultez les formations, ateliers, événements et services.",
+      "planning": "Retrouvez vos activités et les dates limites de dépôt.",
+      "score": "Suivez l’impact de vos actions de réemploi.",
+      "profile": "Consultez les coordonnées associées à votre compte."
+    },
+    "accountStates": {
+      "actif": "Actif",
+      "suspendu": "Suspendu",
+      "banni": "Banni",
+      "unknown": "Indisponible"
+    },
+    "metrics": {
+      "scoreValue": "Points",
+      "objects": "Objets réemployés",
+      "waste": "Déchets évités (kg)",
+      "carbon": "CO₂ économisé (kg)",
+      "badge": "Badge",
+      "starter": "Débutant"
+    },
+    "categories": {
+      "wood": "Bois",
+      "metal": "Métal",
+      "tutorials": "Tutoriels",
+      "ideas": "Astuces",
+      "textile": "Textile",
+      "plastic": "Plastique",
+      "other": "Autre"
+    },
+    "requests": {
+      "draftsOnly": "Les brouillons sont enregistrés sur cet appareil. L’envoi au service de validation est indisponible.",
+      "newListing": "Nouvelle annonce",
+      "newDeposit": "Nouvelle demande",
+      "listingForm": "Informations sur l’annonce",
+      "depositForm": "Informations sur le dépôt",
+      "title": "Titre",
+      "description": "Description",
+      "category": "Catégorie",
+      "location": "Ville, adresse ou lieu souhaité",
+      "choose": "Sélectionner",
+      "condition": "État de l’objet",
+      "good": "Bon état",
+      "used": "Usagé",
+      "repair": "À réparer",
+      "type": "Type d’annonce",
+      "donation": "Don",
+      "sale": "Vente",
+      "price": "Prix (€)",
+      "dimensions": "Dimensions (cm)",
+      "weight": "Poids (kg)",
+      "photos": "Photos",
+      "photoLimit": "JPG, PNG ou WebP. Jusqu’à 3 photos de 400 Ko chacune.",
+      "photo": "Photo {number}",
+      "removePhoto": "Retirer la photo {number}",
+      "photoError": "Impossible de lire les photos sélectionnées.",
+      "photoRequired": "Ajoutez au moins une photo avant de simuler l’envoi.",
+      "required": "Renseignez les champs obligatoires.",
+      "saveDraft": "Enregistrer le brouillon",
+      "submitDemo": "Simuler l’envoi",
+      "updateDemo": "Enregistrer la demande simulée",
+      "draftSaved": "Brouillon enregistré sur cet appareil.",
+      "demoSubmitted": "Demande simulée. Elle apparaît en attente dans cet aperçu.",
+      "confirmRemove": "Supprimer cet élément de ce navigateur ?",
+      "removed": "Élément supprimé.",
+      "states": {
+        "draft": "Brouillon",
+        "pending": "En attente · aperçu",
+        "approved": "Acceptée · aperçu"
+      },
+      "noListings": "Vous n’avez encore aucune annonce.",
+      "noDeposits": "Vous n’avez encore aucune demande de dépôt.",
+      "code": "Code d’ouverture de démonstration",
+      "barcode": "Numéro de code-barres de démonstration",
+      "deadline": "Date limite de dépôt"
+    },
+    "catalogue": {
+      "loading": "Chargement du catalogue…",
+      "restricted": "Tout ou partie du catalogue n’est pas encore accessible à votre compte.",
+      "error": "Impossible de charger tout le catalogue pour le moment.",
+      "retry": "Réessayer",
+      "empty": "Aucune activité ne correspond à votre recherche.",
+      "type": "Type d’activité",
+      "kinds": {
+        "workshop": "Atelier",
+        "training": "Formation",
+        "event": "Événement",
+        "service": "Service"
+      },
+      "endsAt": "Fin",
+      "duration": "Durée",
+      "minutes": "{count} min",
+      "seats": "Nombre de places",
+      "host": "Animation",
+      "free": "Gratuit",
+      "paymentPreview": "Récapitulatif du paiement",
+      "demoPayment": "Total de démonstration : {total}. Aucun paiement ne sera débité.",
+      "confirmDemoPayment": "Confirmer la réservation simulée",
+      "bookDemo": "Simuler une réservation",
+      "cancelDemo": "Retirer du planning d’aperçu",
+      "demoBooked": "Activité ajoutée à votre planning d’aperçu.",
+      "demoCancelled": "Activité retirée de votre planning d’aperçu.",
+      "bookingUnavailable": "La réservation en ligne est indisponible pour le moment.",
+      "samples": {
+        "workshopTitle": "Réparer un meuble en bois",
+        "workshopText": "Apprenez à resserrer un assemblage et à reprendre les parties abîmées d’un petit meuble.",
+        "trainingTitle": "Réutiliser ses chutes de tissu",
+        "trainingText": "Apprenez à assembler vos chutes de tissu pour fabriquer un accessoire durable.",
+        "eventTitle": "Rencontre autour du réemploi",
+        "eventText": "Échangez des idées de transformation et découvrez les réalisations de la communauté.",
+        "serviceTitle": "Diagnostic d’un objet à réparer",
+        "serviceText": "Apportez un petit objet pour identifier la réparation possible et le matériel nécessaire."
+      }
+    },
+    "advice": {
+      "unavailable": "Les conseils de la communauté ne sont pas encore disponibles dans votre espace.",
+      "onlySaved": "Favoris uniquement",
+      "empty": "Aucun conseil ne correspond à votre recherche.",
+      "saved": "Dans vos favoris",
+      "addFavourite": "Ajouter aux favoris",
+      "removeFavourite": "Retirer des favoris",
+      "share": "Partager ce conseil",
+      "shareLink": "Lien de l’exemple",
+      "copied": "Lien copié.",
+      "back": "Retour aux conseils",
+      "articles": {
+        "metal": {
+          "title": "Entretenir un objet en métal",
+          "text": "Nettoyez l’objet et essuyez-le soigneusement. Vérifiez qu’il ne présente pas d’arêtes coupantes avant de le réutiliser."
+        },
+        "tutorials": {
+          "title": "Préparer un objet avant de le réparer",
+          "text": "Videz et nettoyez l’objet. Prenez une photo avant de démonter les pièces pour vous aider à les remettre en place."
+        },
+        "ideas": {
+          "title": "Trier les pièces avant le remontage",
+          "text": "Placez les vis et petites pièces dans des boîtes étiquetées au fur et à mesure du démontage."
+        },
+        "wood": {
+          "title": "Redonner de la tenue à une chaise",
+          "text": "Sur une chaise en bois non peinte, inspectez les assemblages. Resserrez les vis desserrées et vérifiez la stabilité avant de l’utiliser."
+        },
+        "textile": {
+          "title": "Réparer une petite déchirure",
+          "text": "Découpez une pièce de tissu un peu plus grande que la déchirure. Placez-la derrière, épinglez-la et cousez autour de l’ouverture."
+        },
+        "plastic": {
+          "title": "Transformer une boîte en rangement",
+          "text": "Nettoyez une boîte vide en bon état, puis utilisez-la pour ranger les petites pièces. Étiquetez-la pour retrouver ce qu’elle contient."
+        }
+      }
+    },
+    "planning": {
+      "unavailable": "Votre planning ne reçoit pas encore de réservations ni de dépôts confirmés.",
+      "view": "Afficher par",
+      "day": "Jour",
+      "week": "Semaine",
+      "month": "Mois",
+      "date": "Date du planning",
+      "today": "Aujourd’hui",
+      "empty": "Aucune activité dans cette période.",
+      "depositDeadline": "Date limite de dépôt en conteneur",
+      "export": "Exporter cette période (.ics)",
+      "exportHint": "Le fichier contient un rappel la veille de chaque activité.",
+      "reminder": "Rappel UpcycleConnect"
+    },
+    "tutorial": {
+      "open": "Guide de visite",
+      "progress": "Étape {current} sur {total}",
+      "skip": "Quitter le guide",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "finish": "Terminer",
+      "steps": {
+        "overview": "Utilisez le menu de votre espace pour retrouver vos démarches et vos activités.",
+        "listings": "Dans Mes annonces, préparez la description et les photos d’un objet à donner ou à vendre.",
+        "deposits": "Dans Dépôts en conteneur, préparez votre demande et retrouvez les codes et la date limite après validation.",
+        "advice": "Dans Conseils, recherchez des articles par catégorie et retrouvez vos favoris.",
+        "catalogue": "Ouvrez une fiche du catalogue pour connaître la date, le lieu et le prix d’une activité.",
+        "planning": "Dans Mon planning, choisissez une date et affichez la journée, la semaine ou le mois correspondant.",
+        "score": "Dans Upcycling Score, consultez vos points, votre badge et vos indicateurs de réemploi."
+      }
+    }
+  },
   "spaces": {
     "label": "ESPACE EN PRÉPARATION",
     "comingSoon": "Bientôt disponible",
