@@ -150,55 +150,6 @@
       "beginner": "Beginner",
       "intermediate": "Intermediate",
       "expert": "Expert"
-  "particular": {
-    "greeting": "Hello, {name}!",
-    "member": "member",
-    "nameLabel": "Full name",
-    "emailLabel": "Email address",
-    "phoneLabel": "Phone",
-    "addressLabel": "Address",
-    "cityLabel": "City",
-    "statusLabel": "Account status",
-    "demoTitle": "Local preview",
-    "demoText": "Examples and actions in this preview stay in this browser. No real bookings, requests or payments are made.",
-    "startDemo": "Try with sample data",
-    "exitDemo": "Exit preview",
-    "search": "Search",
-    "all": "All options",
-    "storageError": "Your browser could not save this change. Check your available space or storage settings.",
-    "scoreUnavailable": "Your impact figures are not available in your account yet.",
-    "sections": {
-      "overview": "Overview",
-      "listings": "My listings",
-      "deposits": "Container drop-offs",
-      "advice": "Tips",
-      "catalogue": "Catalogue",
-      "planning": "My schedule",
-      "score": "Upcycling Score",
-      "profile": "My information"
-    },
-    "overview": {
-      "listings": "Prepare and find your donation or sale listings.",
-      "deposits": "Describe an item for drop-off and track your requests.",
-      "advice": "Find practical ideas for reusing your items.",
-      "catalogue": "Browse training sessions, workshops, events and services.",
-      "planning": "See your activities and drop-off deadlines.",
-      "score": "Track the impact of your reuse activities.",
-      "profile": "View the contact details associated with your account."
-    },
-    "accountStates": {
-      "actif": "Active",
-      "suspendu": "Suspended",
-      "banni": "Banned",
-      "unknown": "Unavailable"
-    },
-    "metrics": {
-      "scoreValue": "Points",
-      "objects": "Items reused",
-      "waste": "Waste avoided (kg)",
-      "carbon": "CO₂ saved (kg)",
-      "badge": "Badge",
-      "starter": "Beginner"
     },
     "categories": {
       "wood": "Wood",
@@ -257,6 +208,130 @@
       "formTitle": "Event details",
       "starts": "Starts",
       "ends": "Ends",
+      "view": "View by",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "date": "Date",
+      "previous": "Previous",
+      "today": "Today",
+      "next": "Next",
+      "empty": "No activities in this period.",
+      "emptyDrafts": "No local drafts in this period.",
+      "export": "Export schedule (.ics)",
+      "reminder": "The file includes a reminder one day before each activity for your calendar.",
+      "browserReminderHint": "You can enable browser reminders for upcoming activities. They work while this schedule page stays open; local drafts are excluded.",
+      "enableReminders": "Enable browser reminders",
+      "reminderTitle": "UpcycleConnect reminder",
+      "reminderStates": {
+        "active": "Reminders are active on this page.",
+        "denied": "Notifications are not allowed in your browser.",
+        "unavailable": "Notifications are not available in this browser."
+      }
+    },
+    "advice": {
+      "intro": "Prepare and categorise tips and news for the community.",
+      "new": "New content",
+      "formTitle": "Content details",
+      "content": "Content",
+      "keywords": "Keywords",
+      "scheduledFor": "Scheduled publication date",
+      "saveDraft": "Save draft",
+      "publishReal": "Publication unavailable",
+      "scheduleReal": "Scheduling unavailable",
+      "archive": "Archive",
+      "empty": "No content matches your search.",
+      "emptyDrafts": "No local drafts match your search.",
+      "status": {
+        "draft": "Draft",
+        "scheduled": "Scheduled",
+        "published": "Published",
+        "archived": "Archived"
+      }
+    },
+    "moderation": {
+      "view": "View",
+      "reports": "Reports",
+      "discussions": "Discussions",
+      "intro": "Review reports and consult the history of decisions."
+    },
+    "tutorial": {
+      "open": "Take the tour",
+      "progress": "Step {current} of {total}",
+      "skip": "Exit tour",
+      "previous": "Previous",
+      "next": "Next",
+      "finish": "Finish",
+      "steps": {
+        "overview": "Welcome to your space. Use the menu to access each section.",
+        "training": "Prepare sessions and follow approval and registrations.",
+        "planning": "Review activities by day, week or month.",
+        "advice": "Write and categorise tips and news.",
+        "moderation": "Review reports and find the history of actions."
+      }
+    }
+  },
+  "spaces": {
+    "label": "SPACE IN PROGRESS",
+    "comingSoon": "Coming soon",
+    "particular": "Individual space",
+    "professional": "Professional and craftspeople space",
+    "employee": "Staff space",
+    "admin": "Admin space"
+  },
+  "particular": {
+    "greeting": "Hello, {name}!",
+    "member": "member",
+    "nameLabel": "Full name",
+    "emailLabel": "Email address",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "cityLabel": "City",
+    "statusLabel": "Account status",
+    "demoTitle": "Local preview",
+    "demoText": "Examples and actions in this preview stay in this browser. No real bookings, requests or payments are made.",
+    "startDemo": "Try with sample data",
+    "exitDemo": "Exit preview",
+    "search": "Search",
+    "all": "All options",
+    "storageError": "Your browser could not save this change. Check your available space or storage settings.",
+    "scoreUnavailable": "Your impact figures are not available in your account yet.",
+    "sections": {
+      "overview": "Overview",
+      "listings": "My listings",
+      "deposits": "Container drop-offs",
+      "advice": "Tips",
+      "catalogue": "Catalogue",
+      "planning": "My schedule",
+      "score": "Upcycling Score",
+      "profile": "My information"
+    },
+    "overview": {
+      "listings": "Prepare and find your donation or sale listings.",
+      "deposits": "Describe an item for drop-off and track your requests.",
+      "advice": "Find practical ideas for reusing your items.",
+      "catalogue": "Browse training sessions, workshops, events and services.",
+      "planning": "See your activities and drop-off deadlines.",
+      "score": "Track the impact of your reuse activities.",
+      "profile": "View the contact details associated with your account."
+    },
+    "accountStates": {
+      "actif": "Active",
+      "suspendu": "Suspended",
+      "banni": "Banned",
+      "unknown": "Unavailable"
+    },
+    "metrics": {
+      "scoreValue": "Points",
+      "objects": "Items reused",
+      "waste": "Waste avoided (kg)",
+      "carbon": "CO₂ saved (kg)",
+      "badge": "Badge",
+      "starter": "Beginner"
+    },
+    "categories": {
+      "wood": "Wood",
+      "metal": "Metal",
       "tutorials": "Tutorials",
       "ideas": "Ideas",
       "textile": "Textiles",
@@ -391,48 +466,6 @@
       "day": "Day",
       "week": "Week",
       "month": "Month",
-      "date": "Date",
-      "previous": "Previous",
-      "today": "Today",
-      "next": "Next",
-      "empty": "No activities in this period.",
-      "emptyDrafts": "No local drafts in this period.",
-      "export": "Export schedule (.ics)",
-      "reminder": "The file includes a reminder one day before each activity for your calendar.",
-      "browserReminderHint": "You can enable browser reminders for upcoming activities. They work while this schedule page stays open; local drafts are excluded.",
-      "enableReminders": "Enable browser reminders",
-      "reminderTitle": "UpcycleConnect reminder",
-      "reminderStates": {
-        "active": "Reminders are active on this page.",
-        "denied": "Notifications are not allowed in your browser.",
-        "unavailable": "Notifications are not available in this browser."
-      }
-    },
-    "advice": {
-      "intro": "Prepare and categorise tips and news for the community.",
-      "new": "New content",
-      "formTitle": "Content details",
-      "content": "Content",
-      "keywords": "Keywords",
-      "scheduledFor": "Scheduled publication date",
-      "saveDraft": "Save draft",
-      "publishReal": "Publication unavailable",
-      "scheduleReal": "Scheduling unavailable",
-      "archive": "Archive",
-      "empty": "No content matches your search.",
-      "emptyDrafts": "No local drafts match your search.",
-      "status": {
-        "draft": "Draft",
-        "scheduled": "Scheduled",
-        "published": "Published",
-        "archived": "Archived"
-      }
-    },
-    "moderation": {
-      "view": "View",
-      "reports": "Reports",
-      "discussions": "Discussions",
-      "intro": "Review reports and consult the history of decisions."
       "date": "Schedule date",
       "today": "Today",
       "empty": "No activities in this period.",
@@ -445,15 +478,6 @@
       "open": "Take the tour",
       "progress": "Step {current} of {total}",
       "skip": "Exit tour",
-      "previous": "Previous",
-      "next": "Next",
-      "finish": "Finish",
-      "steps": {
-        "overview": "Welcome to your space. Use the menu to access each section.",
-        "training": "Prepare sessions and follow approval and registrations.",
-        "planning": "Review activities by day, week or month.",
-        "advice": "Write and categorise tips and news.",
-        "moderation": "Review reports and find the history of actions."
       "previous": "Back",
       "next": "Next",
       "finish": "Finish",
@@ -467,13 +491,5 @@
         "score": "Under Upcycling Score, see your points, badge and reuse figures."
       }
     }
-  },
-  "spaces": {
-    "label": "SPACE IN PROGRESS",
-    "comingSoon": "Coming soon",
-    "particular": "Individual space",
-    "professional": "Professional and craftspeople space",
-    "employee": "Staff space",
-    "admin": "Admin space"
   }
 }
