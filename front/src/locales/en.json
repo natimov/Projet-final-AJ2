@@ -491,5 +491,107 @@
         "score": "Under Upcycling Score, see your points, badge and reuse figures."
       }
     }
+  },
+  "professional": {
+    "kicker": "PROFESSIONAL SPACE",
+    "greeting": "Hello, {name}!",
+    "member": "partner",
+    "accountType": "Craftsperson · professional",
+    "intro": "Find materials to transform, your collections and projects that give objects a second life.",
+    "sectionLabel": "YOUR SPACE",
+    "navigation": "Professional space navigation",
+    "sections": {
+      "overview": "Overview",
+      "materials": "Available objects",
+      "containers": "Container collections",
+      "projects": "Upcycling projects",
+      "subscription": "Subscription"
+    },
+    "descriptions": {
+      "overview": "An overview of your projects and available objects.",
+      "materials": "Browse listings and find materials for your next project.",
+      "containers": "Find the information needed to collect objects.",
+      "projects": "Present your work and track its progress.",
+      "subscription": "View your subscription and billing."
+    },
+    "actions": {
+      "viewAll": "View all",
+      "viewProjects": "View my projects",
+      "retry": "Try again"
+    },
+    "states": {
+      "signedOut": "Log in with a professional account to view your projects.",
+      "restricted": "This feature is available to professional accounts only.",
+      "sessionExpired": "Your session has expired. Log in again to view your projects.",
+      "loading": "Loading projects…",
+      "error": "Unable to load your projects. Please try again.",
+      "empty": "You have no projects yet."
+    },
+    "overview": {
+      "metrics": {
+        "projects": "Projects tracked",
+        "completed": "Completed projects"
+      },
+      "projectsEyebrow": "Your work",
+      "projectsTitle": "Recent projects",
+      "marketEyebrow": "Discover"
+    },
+    "materials": {
+      "unavailableTitle": "Catalogue unavailable",
+      "unavailable": "The listings catalogue is not available yet.",
+      "categories": {
+        "wood": "Wood",
+        "textile": "Textile",
+        "metal": "Metal",
+        "plastic": "Plastic",
+        "other": "Other"
+      },
+      "search": "Search for an object",
+      "all": "All materials"
+    },
+    "containers": {
+      "unavailableTitle": "Collection tracking unavailable",
+      "unavailable": "Container collection information is not available yet.",
+      "code": "Collection code",
+      "validate": "Validate code"
+    },
+    "projects": {
+      "new": "New project",
+      "formTitle": "Create a project",
+      "editTitle": "Edit project",
+      "titleLabel": "Project name",
+      "categoryLabel": "Main material",
+      "chooseCategory": "Choose a material",
+      "statusLabel": "Project status",
+      "descriptionLabel": "Description",
+      "status": {
+        "en_preparation": "In preparation",
+        "en_cours": "In progress",
+        "termine": "Completed"
+      },
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "formError": "Add a name and description to continue.",
+      "saveError": "Unable to save the project. Please try again.",
+      "deleteError": "Unable to delete the project. Please try again.",
+      "saved": "The project has been saved.",
+      "deleted": "The project has been deleted.",
+      "confirmDelete": "Delete the project “{name}”?",
+      "impactLabel": "Material reused (kg)",
+      "impactValue": "{weight} kg of material reused",
+      "beforePhoto": "Before photo",
+      "afterPhoto": "After photo",
+      "feature": "Request a feature",
+      "featured": "Feature requested"
+    },
+    "subscription": {
+      "unavailableTitle": "Subscription management unavailable",
+      "unavailable": "Subscriptions and billing are not available yet.",
+      "plan": "My subscription",
+      "contracts": "My contracts",
+      "invoices": "My invoices"
+    }
   }
 }

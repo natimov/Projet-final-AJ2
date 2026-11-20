@@ -3,7 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import AdminUsersView from '../views/AdminUsersView.vue'
-import ComingSoonView from '../views/ComingSoonView.vue'
 import { useAuthStore } from '../stores/auth'
 
 const router = createRouter({
@@ -41,8 +40,7 @@ const router = createRouter({
     {
       path: '/espace-professionnel',
       name: 'professional-space',
-      component: ComingSoonView,
-      meta: { titleKey: 'spaces.professional' },
+      component: () => import('../views/ProfessionnelView.vue'),
     },
     {
       path: '/espace-salarie',

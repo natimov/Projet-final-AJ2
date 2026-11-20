@@ -491,5 +491,107 @@
         "score": "Dans Upcycling Score, consultez vos points, votre badge et vos indicateurs de réemploi."
       }
     }
+  },
+  "professional": {
+    "kicker": "ESPACE PROFESSIONNEL",
+    "greeting": "Bonjour, {name} !",
+    "member": "atelier partenaire",
+    "accountType": "Artisan · professionnel",
+    "intro": "Retrouvez les matières à transformer, vos retraits et les projets qui donnent une seconde vie aux objets.",
+    "sectionLabel": "VOTRE ESPACE",
+    "navigation": "Navigation de l’espace professionnel",
+    "sections": {
+      "overview": "Vue d’ensemble",
+      "materials": "Objets disponibles",
+      "containers": "Retraits en conteneur",
+      "projects": "Projets d’upcycling",
+      "subscription": "Abonnement"
+    },
+    "descriptions": {
+      "overview": "Un aperçu de vos projets et des objets disponibles.",
+      "materials": "Parcourez les annonces et repérez les matières utiles à votre prochain projet.",
+      "containers": "Retrouvez les informations nécessaires à la récupération des objets.",
+      "projects": "Présentez vos réalisations et suivez leur progression.",
+      "subscription": "Consultez votre abonnement et votre facturation."
+    },
+    "actions": {
+      "viewAll": "Tout voir",
+      "viewProjects": "Voir mes projets",
+      "retry": "Réessayer"
+    },
+    "states": {
+      "signedOut": "Connectez-vous avec un compte professionnel pour consulter vos projets.",
+      "restricted": "Cette fonction est réservée aux comptes professionnels.",
+      "sessionExpired": "Votre session a expiré. Reconnectez-vous pour consulter vos projets.",
+      "loading": "Chargement des projets…",
+      "error": "Impossible de charger vos projets. Réessayez.",
+      "empty": "Vous n’avez pas encore de projet."
+    },
+    "overview": {
+      "metrics": {
+        "projects": "Projets suivis",
+        "completed": "Projets terminés"
+      },
+      "projectsEyebrow": "Vos réalisations",
+      "projectsTitle": "Projets récents",
+      "marketEyebrow": "À découvrir"
+    },
+    "materials": {
+      "unavailableTitle": "Catalogue indisponible",
+      "unavailable": "Le catalogue des annonces n’est pas encore disponible.",
+      "categories": {
+        "wood": "Bois",
+        "textile": "Textile",
+        "metal": "Métal",
+        "plastic": "Plastique",
+        "other": "Autre"
+      },
+      "search": "Rechercher un objet",
+      "all": "Toutes les matières"
+    },
+    "containers": {
+      "unavailableTitle": "Suivi des retraits indisponible",
+      "unavailable": "Les informations de retrait en conteneur ne sont pas encore disponibles.",
+      "code": "Code de retrait",
+      "validate": "Valider le code"
+    },
+    "projects": {
+      "new": "Nouveau projet",
+      "formTitle": "Créer un projet",
+      "editTitle": "Modifier le projet",
+      "titleLabel": "Nom du projet",
+      "categoryLabel": "Matière principale",
+      "chooseCategory": "Choisir une matière",
+      "statusLabel": "État du projet",
+      "descriptionLabel": "Description",
+      "status": {
+        "en_preparation": "En préparation",
+        "en_cours": "En cours",
+        "termine": "Terminé"
+      },
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "formError": "Ajoutez un nom et une description pour continuer.",
+      "saveError": "Impossible d’enregistrer le projet. Réessayez.",
+      "deleteError": "Impossible de supprimer le projet. Réessayez.",
+      "saved": "Le projet a été enregistré.",
+      "deleted": "Le projet a été supprimé.",
+      "confirmDelete": "Supprimer le projet « {name} » ?",
+      "impactLabel": "Matière réemployée (kg)",
+      "impactValue": "{weight} kg de matière réemployée",
+      "beforePhoto": "Photo avant",
+      "afterPhoto": "Photo après",
+      "feature": "Demander une mise en avant",
+      "featured": "Demande de mise en avant"
+    },
+    "subscription": {
+      "unavailableTitle": "Gestion de l’abonnement indisponible",
+      "unavailable": "Les abonnements et la facturation ne sont pas encore disponibles.",
+      "plan": "Mon abonnement",
+      "contracts": "Mes contrats",
+      "invoices": "Mes factures"
+    }
   }
 }
